@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useSiteSettings } from "../hooks/useSiteData";
+import { company } from "../data/content";
 
 const navItems = [
   { to: "/", label: "Home" },
@@ -9,21 +9,18 @@ const navItems = [
 ];
 
 export default function Header() {
-  const { settings } = useSiteSettings();
-
   return (
     <header className="sticky top-0 z-40 bg-charcoal text-paper border-b-4 border-safety">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-20">
         <NavLink to="/" className="flex items-center gap-3 shrink-0">
-          {settings.logo_url ? (
-            <img src={settings.logo_url} alt={settings.company_name} className="w-10 h-10 object-contain bg-white" />
-          ) : (
-            <span className="w-10 h-10 bg-safety text-charcoal font-display font-800 flex items-center justify-center text-xl">
-              {settings.company_name?.[0] || "N"}
-            </span>
-          )}
+          <span className="w-10 h-10 bg-safety text-charcoal font-display font-800 flex items-center justify-center text-xl">
+            N
+          </span>
           <span className="font-display text-lg leading-tight tracking-tight">
-            {settings.company_name}
+            {company.short}
+            <span className="block text-[11px] font-body font-normal text-line tracking-normal">
+              Building Concept
+            </span>
           </span>
         </NavLink>
 
