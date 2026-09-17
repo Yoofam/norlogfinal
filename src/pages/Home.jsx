@@ -34,10 +34,10 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="max-w-6xl mx-auto px-6 pt-16 pb-20 grid md:grid-cols-[1.3fr_1fr] gap-12 items-start">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-14 sm:pb-20 grid md:grid-cols-[1.3fr_1fr] gap-10 sm:gap-12 items-start">
         <div>
           <p className="font-mono text-sm text-rust mb-4">Est. Nigeria — Trusted by Contractors</p>
-          <h1 className="font-display text-5xl md:text-6xl leading-[1.05] text-charcoal">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl leading-[1.1] md:leading-[1.05] text-charcoal">
             {settings.tagline}
           </h1>
           <p className="mt-6 text-steel text-lg max-w-xl leading-relaxed">
