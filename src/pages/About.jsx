@@ -1,13 +1,15 @@
 import PageBanner from "../components/PageBanner";
-import { company } from "../data/content";
+import { useSiteSettings } from "../hooks/useSiteData";
 
 export default function About() {
+  const { settings } = useSiteSettings();
+
   return (
     <div>
       <PageBanner
         eyebrow="ABOUT"
-        title="Building materials, heavy equipment sales and rentals, and full-service construction — delivered on time, priced right, and built to last."
-        detail="NORLOG started as a materials supplier to contractors in Ogun State and grew into a full site partner — machines, crews, and engineers included."
+        title="Built on-site, not in an office"
+        detail={`${settings.company_name} started as a materials supplier to contractors and grew into a full site partner — machines, crews, and engineers included.`}
       />
 
       <div className="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-2 gap-12">
@@ -31,15 +33,15 @@ export default function About() {
           <dl className="space-y-4 text-sm">
             <div>
               <dt className="text-steel text-xs uppercase font-mono mb-1">Phone</dt>
-              <dd className="font-semibold text-charcoal">{company.phone}</dd>
+              <dd className="font-semibold text-charcoal">{settings.phone}</dd>
             </div>
             <div>
               <dt className="text-steel text-xs uppercase font-mono mb-1">Email</dt>
-              <dd className="font-semibold text-charcoal">{company.email}</dd>
+              <dd className="font-semibold text-charcoal">{settings.email}</dd>
             </div>
             <div>
               <dt className="text-steel text-xs uppercase font-mono mb-1">Site Office</dt>
-              <dd className="font-semibold text-charcoal">{company.address}</dd>
+              <dd className="font-semibold text-charcoal">{settings.address}</dd>
             </div>
           </dl>
         </div>

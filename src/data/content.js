@@ -2,9 +2,9 @@ export const company = {
   name: "Norlog Building Concept",
   short: "NORLOG",
   tagline: "Materials, machines, and manpower for the job in front of you.",
-  phone: "+234 806 040 9740",
-  email: "ademola75@gmail.com",
-  address: "Onikolobo, Abeokuta, Ogun State, Nigeria",
+  phone: "+234 803 000 0000",
+  email: "info@norlogbc.com",
+  address: "Plot 14, Industrial Layout, Abuja, Nigeria",
   stats: [
     { value: "15", unit: "yrs", label: "on active sites" },
     { value: "500", unit: "+", label: "projects supplied" },
